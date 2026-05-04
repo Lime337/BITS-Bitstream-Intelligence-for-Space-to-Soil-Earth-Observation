@@ -8,7 +8,7 @@ The current demonstration uses the **2021 Dixie Fire** region in Northern Califo
 
 ## 1. Project Overview
 
-![Overall Methodology](./assets/methodology.png)
+![Overall Methodology](BITS Methodology.png)
 
 BITS combines two processing layers.
 
@@ -277,7 +277,7 @@ Interpretation:
 ### Hardware design components
 
 The repository includes FPGA-oriented Verilog/SystemVerilog building blocks for the N-BAI/HDC layer:
-![Hardware Schematic](./assets/hardware.png)
+![Hardware Schematic](Schematic.png)
 
 ```text
 hdc_xor_bind.sv
