@@ -8,6 +8,8 @@ The current demonstration uses the **2021 Dixie Fire** region in Northern Califo
 
 ## 1. Project Overview
 
+![Overall Methodology](./assets/methodology.png)
+
 BITS combines two processing layers.
 
 ### Layer 1 — SID: Stochastic Image Conditioning
@@ -275,6 +277,7 @@ Interpretation:
 ### Hardware design components
 
 The repository includes FPGA-oriented Verilog/SystemVerilog building blocks for the N-BAI/HDC layer:
+![Hardware Schematic](./assets/hardware.png)
 
 ```text
 hdc_xor_bind.sv
