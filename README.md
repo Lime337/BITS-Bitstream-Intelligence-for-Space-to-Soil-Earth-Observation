@@ -8,7 +8,7 @@ The current demonstration uses the **2021 Dixie Fire** region in Northern Califo
 
 ## 1. Project Overview
 
-![Overall Methodology](BITS Methodology.png)
+![Overall Methodology](BITS_Methodology.png)
 
 BITS combines two processing layers.
 
