@@ -309,7 +309,7 @@ Python Scripts/
   measure_sid_no_reference_metrics_fixed.py
   make_sid_north_up_figures_fixed.py
 
-hardware/
+Hardware RTL/
   clk.xdc
   hamming_sim.v
   hdc_core.v
@@ -393,16 +393,3 @@ python scripts/make_sid_north_up_figures_fixed.py   --npz dixie_wildfire_dense.n
 - Large GeoTIFF/NPZ files should not be committed to GitHub.
 
 ---
-
-## 10. Recommended Dataset Citation Text
-
-```text
-MODIS/Terra Surface Reflectance Daily L2G Global 1 km and 500 m SIN Grid, Version 6.1,
-MOD09GA.061, DOI: 10.5067/MODIS/MOD09GA.061.
-```
-
-For burned-area proxy labeling:
-
-```text
-MODIS Burned Area Monthly Global 500 m, Version 6.1, MCD64A1.061, BurnDate band.
-```
