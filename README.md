@@ -1,0 +1,2 @@
+# BITS-Bitstream-Intelligence-for-Space-to-Soil-Earth-Observation
+BITS is a hardware-efficient Earth observation framework combining stochastic computing and hyperdimensional computing for low-power image enhancement and classification. Designed for NASA’s space-to-soil challenges, it processes imagery using bitstreams and high-dimensional vectors for scalable, real-time deployment on edge hardware.
