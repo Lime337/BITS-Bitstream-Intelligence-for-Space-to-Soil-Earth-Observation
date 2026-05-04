@@ -1,6 +1,6 @@
 # BITS: Bitstream Intelligence for Space-to-Soil Earth Observation
 
-**BITS** is an end-to-end prototype for quality-aware remote-sensing image conditioning, compact hyperdimensional land-signature generation, and onboard-style decision support for soil, vegetation, and land-resilience monitoring.
+**BITS** is an end-to-end prototype developed by the **tML-EC Lab** as part of the [NASA Space-to-Soil Challenge](https://nasa-space-to-soil.org/), targeting quality-aware remote-sensing image conditioning, compact hyperdimensional land-signature generation, and onboard-style decision support for soil, vegetation, and land-resilience monitoring.
 
 The current demonstration uses the **2021 Dixie Fire** region in Northern California to show how BITS can track pre-fire baseline conditions, wildfire-driven peak disturbance, burned-area separability, post-fire vegetation loss, and long-term recovery.
 
@@ -12,7 +12,7 @@ The current demonstration uses the **2021 Dixie Fire** region in Northern Califo
 
 BITS combines two processing layers.
 
-### Layer 1 — SID: Stochastic Image Conditioning
+### Layer 1 — SID: Stochastic Image Enhancement
 
 **SID** is a stochastic/bitstream-inspired image-conditioning front end. In this prototype, it is used as a quality-aware conditioning layer for degraded remote-sensing observations.
 
@@ -280,13 +280,12 @@ The repository includes FPGA-oriented Verilog/SystemVerilog building blocks for 
 ![Hardware Schematic](Schematic.png)
 
 ```text
-hdc_xor_bind.sv
-hdc_popcount.sv
-hdc_hamming.sv
-hdc_majority_bundle.sv
-hdc_threshold_decision.sv
-bits_hdc_top_demo.sv
-sid3x3_condition_core.sv
+clk.xdc
+hamming_sim.v
+hdc_core.v
+popcount.v
+sc_dehaze.v
+top_hdc_sc.v
 ```
 
 The HDC hardware maps naturally to:
@@ -297,48 +296,31 @@ The HDC hardware maps naturally to:
 - threshold decision logic,
 - compact binary memory.
 
-A Verilog wrapper generator is also included:
-
-```bash
-python hardware/scripts/generate_verilog.py --D 4096 --K 8 --out hardware/rtl/generated
-```
-
----
 
 ## 7. Repository Structure
 
 ```text
-src/
+Python Scripts/
   bits_sid_nbai_demo_v6_wildfire_fixed.py
-
-scripts/
   gee_export_dixie_wildfire_dense.py
-  gee_export_dixie_paper_rgb_dense.py
+  gee_export_dixie_paper_rgb.py
   bits_wildfire_report_tools.py
   bits_finalize_dense_wildfire_summary.py
   measure_sid_no_reference_metrics_fixed.py
   make_sid_north_up_figures_fixed.py
 
 hardware/
-  rtl/
-    hdc_xor_bind.sv
-    hdc_popcount.sv
-    hdc_hamming.sv
-    hdc_majority_bundle.sv
-    hdc_threshold_decision.sv
-    bits_hdc_top_demo.sv
-    sid3x3_condition_core.sv
-  tb/
-    tb_bits_hdc_top_demo.sv
-  scripts/
-    generate_verilog.py
+  clk.xdc
+  hamming_sim.v
+  hdc_core.v
+  popcount.v
+  sc_dehaze.v
+  top_hdc_sc.v
 
-docs/
-  methodology.md
-  metrics.md
+BITS_Methodology.png
+Schematic.png
 
-data/
-  README.md
+README.md
 ```
 
 ---
